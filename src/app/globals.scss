@@ -1,0 +1,196 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.navBar {
+  background-color: #212731;
+
+  .search{
+    position: relative;
+    .search-icon {
+      position: fixed;
+    }
+  }
+
+  .links-text-color {
+    color: #D1D6DA;
+  }
+
+  .blur-background {
+    backdrop-filter: blur(10px);
+  }
+
+  .background-navBar {
+    background-color: #212731;
+  }
+
+  .navbar-padding {
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+  }
+
+  .text-underline-animation {
+    position: relative;
+    text-decoration: none;
+  }
+
+  .text-underline-animation::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+
+  .text-underline-animation:hover::before {
+    transform: scaleX(1);
+  }
+
+  .slide-in-done {
+    animation: slide-in 600ms ease-in;
+  }
+  
+  .slide-out-done {
+    animation: slide-out 600ms ease-out;
+  }
+  
+  @keyframes slide-in {
+    0% {
+      opacity: 0;
+      transform: translatex(26rem);
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slide-out {
+    100% {
+      opacity: 0;
+      transform: translateX(26rem);
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .navbar-padding {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+  }
+}
+
+.choice-card {
+  position: relative;
+  .choice-promo{
+    position: absolute;
+    top: -1rem;
+    left: 0rem;
+  }
+
+  .choice-index{
+    position: absolute;
+    top: 2.5rem;
+    left: 0rem;
+    border-radius: 100%;
+    background-color: #ffff;
+    border: 1px solid #E1E4E6;
+    height: 44px;
+    width: 44px;
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+  }
+
+  .choice-card-image{
+    width: 65% !important;
+  }
+
+  @media screen and (min-width: 375px) {
+    .choice-promo{
+      left: -1rem;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .choice-card-image{
+      width: 30% !important;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .choice-index {
+      left: -1.5rem;
+    }
+    .choice-card-image{
+      width: 100% !important;
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    .choice-card-image{
+      width: 88% !important;
+    }
+  }
+}
+
+.relatedCard {
+  .related-card-image{
+    width: 50% !important;
+  }
+
+  @media screen and (min-width: 768px) {
+    .related-card-image{
+      width: 25% !important;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .related-card-image{
+      width: 50% !important;
+    }
+  }
+}
+
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.animate {
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-name: slide-up;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in;
+}
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

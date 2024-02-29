@@ -17,7 +17,7 @@ const Footer = () => {
   ];
 
   return (
-    <section className="bg-[#212731] flex flex-col md:flex-row gap-5 lg:gap-0 ps-4 md:ps-0 justify-evenly pt-[2rem] pb-[5rem]">
+    <section className="animate bg-[#212731] flex flex-col md:flex-row gap-5 lg:gap-0 ps-4 md:ps-0 justify-evenly pt-[2rem] pb-[5rem]">
       <div className="flex flex-col gap-5">
         <p className="text-base font-normal text-white">Categories</p>
         {categories &&

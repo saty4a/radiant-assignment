@@ -14,21 +14,25 @@ body::-webkit-scrollbar {
 .navBar {
   background-color: #212731;
 
-  .search{
+  //placing the search icon inside the search input
+  .search{ 
     position: relative;
     .search-icon {
       position: fixed;
     }
   }
 
+  //color of nav-links
   .links-text-color {
     color: #D1D6DA;
   }
 
+  //blur the background in mobile view
   .blur-background {
     backdrop-filter: blur(10px);
   }
 
+  //background color of navbar
   .background-navBar {
     background-color: #212731;
   }
@@ -38,6 +42,7 @@ body::-webkit-scrollbar {
     padding-bottom: 2rem;
   }
 
+  //underline animation of navbar
   .text-underline-animation {
     position: relative;
     text-decoration: none;
@@ -60,6 +65,7 @@ body::-webkit-scrollbar {
     transform: scaleX(1);
   }
 
+  //navbar animation in mobile view
   .slide-in-done {
     animation: slide-in 600ms ease-in;
   }
@@ -95,12 +101,15 @@ body::-webkit-scrollbar {
 
 .choice-card {
   position: relative;
+
+  //position promo card the best value and best price card
   .choice-promo{
     position: absolute;
     top: -1rem;
     left: 0rem;
   }
 
+  //position the number of choice
   .choice-index{
     position: absolute;
     top: 2.5rem;
@@ -114,10 +123,12 @@ body::-webkit-scrollbar {
     padding-top: 0.5rem;
   }
 
+  //size of image in choice card
   .choice-card-image{
     width: 65% !important;
   }
 
+  //making responsive according to different screen sizes
   @media screen and (min-width: 375px) {
     .choice-promo{
       left: -1rem;
@@ -147,10 +158,12 @@ body::-webkit-scrollbar {
 }
 
 .relatedCard {
+  // related card image
   .related-card-image{
     width: 50% !important;
   }
 
+  // related card image responsive
   @media screen and (min-width: 768px) {
     .related-card-image{
       width: 25% !important;
@@ -164,6 +177,7 @@ body::-webkit-scrollbar {
   }
 }
 
+// making scrollable animation
 .reveal {
   position: relative;
   transform: translateY(150px);
@@ -176,6 +190,7 @@ body::-webkit-scrollbar {
   opacity: 1;
 }
 
+//slide-up animation
 .animate {
   animation-duration: 1s;
   animation-delay: 0.5s;

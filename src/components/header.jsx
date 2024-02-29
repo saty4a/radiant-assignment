@@ -4,7 +4,7 @@ import NavElements from "./navElements";
 import { FaBars } from "react-icons/fa6";
 import { FaXmark } from "react-icons/fa6";
 
-const isBrowser = () => typeof window !== "undefined";
+const isBrowser = () => typeof window !== "undefined"; //checking for window object
 
 const Header = () => {
   const styles = "sticky top-0 z-50 blur-background";
@@ -18,7 +18,7 @@ const Header = () => {
   const [navAnimation, setNavAnimation] = useState("slide-in-done");
 
   const ref = useRef();
-  const handleNavBar = () => {
+  const handleNavBar = () => { //handle navbar and it's animation in mobile view
     if (showNavBar) {
       setNavAnimation("slide-out-done");
       setTimeout(() => {
@@ -30,7 +30,7 @@ const Header = () => {
     }
   };
 
-  useEffect(() => {
+  useEffect(() => { //handle scroll part when navbar is open in mobile view
     if (showNavBar) {
       document.body.style.overflow = "hidden";
     } else {
@@ -39,7 +39,7 @@ const Header = () => {
   }, [setShowNavBar, showNavBar]);
 
   useEffect(() => {
-    const handleWindowResize = () => {
+    const handleWindowResize = () => { //show the navbar according to window size for mobile and desktop
       setWindowWidth(window.innerWidth);
       if (window.innerWidth >= 768) {
         setShowNavBar(false);
@@ -57,9 +57,10 @@ const Header = () => {
   }, []);
 
   return (
-    <nav className={`navBar ${styleNavBar}`}>
+    // adding styleNavBar so that navbar sticks to the top in desktop view
+    <nav className={`navBar ${styleNavBar}`}> 
       <div className="flex items-center mx-4 justify-between md:justify-evenly">
-        {windowWidth >= 768 ? (
+        {windowWidth >= 768 ? ( // if window width is more than 768px then it shows the desktop view or else mobile view
           <NavElements refs={ref} h={"full"} directions={"flex-row"} />
         ) : !showNavBar ? (
           <div className="flex gap-5 items-center">

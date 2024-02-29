@@ -7,6 +7,7 @@ import { reveal } from "@/components/scrollAnimation";
 export default function Home() {
   const isBrowser = () => typeof window !== "undefined";
   if (isBrowser()) {
+    //when window scrolls the reveal animation is triggered
     window.addEventListener("scroll",reveal);
     return (
       <main className="">

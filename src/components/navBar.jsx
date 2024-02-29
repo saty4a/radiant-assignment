@@ -11,7 +11,7 @@ const NavBar = ({ setShowNavBar, navAnimation, setNavAnimation }) => {
   };
 
   useEffect(() => {
-    if (checkNavBar) {
+    if (checkNavBar) { //handle the navbar animation in mobile view
       setNavAnimation("slide-out-done");
       setTimeout(() => {
         setShowNavBar(false);
@@ -25,9 +25,10 @@ const NavBar = ({ setShowNavBar, navAnimation, setNavAnimation }) => {
   };
 
   return (
+    // mobile view navbar a bigger div with height 100vh and smaller div that contains the navbar elements
     <div
       className={`${navAnimation} h-[100vh] w-full top-0 fixed right-0 z-20 blur-background`}
-      onClick={handleClick}
+      onClick={handleClick} 
     >
       <NavElements
         ref={ref}

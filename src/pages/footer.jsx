@@ -19,7 +19,7 @@ const Footer = () => {
   return (
     <section className="bg-[#212731] flex flex-col md:flex-row gap-5 lg:gap-0 ps-4 md:ps-0 justify-evenly pt-[2rem] pb-[5rem]">
       <div className="flex flex-col gap-5">
-        <p className="text-base font-normal text-white">Categories</p>
+        <p className="text-base font-normal text-white">Categories</p>  {/* show the footer categories part */}
         {categories &&
           categories.map((data, index) => (
             <p
@@ -31,7 +31,7 @@ const Footer = () => {
           ))}
       </div>
       <div className="flex flex-col gap-5">
-        <p className="text-base font-normal text-white">Contact</p>
+        <p className="text-base font-normal text-white">Contact</p> {/* show the footer contact part */}
         {contact &&
           contact.map((data, index) => (
             <p

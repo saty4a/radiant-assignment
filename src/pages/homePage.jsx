@@ -10,6 +10,7 @@ import starsThree from "../assets/starsThree.png";
 import RelatedCard from "@/components/relatedCard";
 
 const HomePage = () => {
+  //tools array
   const tools = [
     "Tools",
     "AWS Builder",
@@ -19,8 +20,10 @@ const HomePage = () => {
     "BlueHosting",
   ];
 
+  //paths array
   const path = ["Home", "Hosting for all", "Hosting", "Hosting6", "Hosting5"];
 
+  //choices array of objects
   const choices = [
     {
       imageName: "Builder 1",
@@ -73,6 +76,7 @@ const HomePage = () => {
     },
   ];
 
+  //related cards array of objects
   const relatedCard = [
     {
       discount: "20%",
@@ -99,7 +103,7 @@ const HomePage = () => {
 
   return (
     <section className="animate bg-[#FBFCFD] flex justify-center pt-10">
-      <div className="flex flex-col mt-2 md:mt-0 gap-4 mx-3 lg:mx-0 w-full lg:w-[50rem] xl:w-[70rem]">
+      <div className="flex flex-col mt-2 md:mt-0 gap-4 mx-3 lg:mx-0 w-full lg:w-[50rem] xl:w-[70rem]"> {/* giving width to div so that it appears like desgin */}
         <h4 className="font-normal text-5xl mt-5">
           Best Website builders in the US
         </h4>
@@ -123,15 +127,15 @@ const HomePage = () => {
           </div>
         </div>
         <hr className="text-[#E1E4E6]"></hr>
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2"> {/* calling ToolCard to display tools */}
           {tools &&
             tools.map((data, index) => <ToolCard data={data} key={index} />)}
         </div>
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2"> {/* calling PathCard to display Paths */}
           {path &&
             path.map((data, index) => <PathCard data={data} key={index} />)}
         </div>
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2"> {/* calling ChoiceCard to display Choices */}
           {choices &&
             choices.map((data, index) => (
               <ChoiceCard data={data} key={index} index={index} />
@@ -140,13 +144,13 @@ const HomePage = () => {
         <h4 className="font-normal text-4xl mt-[3rem] mb-[2rem] text-[#2C384A]">
           Related deals you might like for
         </h4>
-        <div className="flex gap-5 xl:gap-0 justify-between flex-col flex-wrap md:flex-row">
+        <div className="flex gap-5 xl:gap-0 justify-between flex-col flex-wrap md:flex-row"> {/* calling RelatedCard to display Related Choices */}
           {relatedCard &&
             relatedCard.map((data, index) => (
               <RelatedCard data={data} key={index} />
             ))}
         </div>
-        <div className="flex flex-col md:flex-row justify-between items-center mt-[4rem] mb-[2rem]">
+        <div className="flex flex-col md:flex-row justify-between items-center mt-[4rem] mb-[2rem]"> {/* Sign up form */}
           <h4 className="text-[#5C6874] text-4xl font-normal ms-4">
             Sign up and get exclusive special deals
           </h4>

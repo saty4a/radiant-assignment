@@ -1,3 +1,4 @@
+//scrollable animation function
 export function reveal() {
     var reveals = document.querySelectorAll(".reveal");
   

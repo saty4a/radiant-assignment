@@ -1,3 +1,4 @@
+//if highlight have points here it is displayed
 const HighlightReasons = ({highlightReasons}) => {
   return (
     <div className="bg-[#FFF4ED] rounded-lg flex flex-col gap-2 py-3 mt-2 ms-5">

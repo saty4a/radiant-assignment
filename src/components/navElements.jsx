@@ -4,6 +4,7 @@ import { FiSearch } from "react-icons/fi";
 
 const NavElements = (props) => {
   useEffect(() => {
+    //adding the navbar background to mobile view
     const navBg = document.querySelector(".navElements");
     if (window.innerWidth <= 1024) {
       navBg.classList.add("background-navBar");
@@ -29,7 +30,7 @@ const NavElements = (props) => {
       </li>
       <li>
         <a
-          className="links-text-color nav-elements text-underline-animation"
+          className="links-text-color nav-elements text-underline-animation" // adding the animation for navbar elements
           href="#"
         >
           Categories

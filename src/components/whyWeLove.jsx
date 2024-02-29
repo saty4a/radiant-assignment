@@ -1,5 +1,6 @@
 import { FaCheck } from "react-icons/fa6";
 
+// if whyReasons are present then here it is dsiplayed
 const WhyWeLove = ({ whyReasons }) => {
   return (
     <div className="flex flex-col gap-2 mt-5 text-center lg:text-start">
